@@ -1,0 +1,41 @@
+
+Debugging Guide for Cypress Framework
+This document provides guidance on how to approach debugging the intentional issues in this Cypress framework and implementing the Page Object Model (POM) using AI assistance.
+Debugging Approach
+When debugging the Cypress framework, consider following these steps:
+The framework contains several intentional syntax and logical errors that are not straightforward to fix. These issues simulate real-world problems that developers might encounter when working with Cypress. To effectively debug these issues, follow this systematic approach:
+Run the tests first to identify failures. Start by running the Cypress tests to see what errors occur. This will give you a starting point for debugging.
+Read error messages carefully. Cypress usually provides detailed error messages that can point you to the source of the problem. Pay close attention to line numbers and error descriptions.
+Check configuration files. Many test failures can be caused by incorrect configuration. Review the cypress.config.js file for any potential issues with settings like timeouts, viewport dimensions, or other configuration parameters.
+Inspect custom commands. Custom commands in the support files can cause subtle issues if they're not implemented correctly. Review the commands.js file for any syntax errors or logical problems.
+Review test syntax. Cypress has specific syntax requirements for its commands and assertions. Look for issues with command chaining, selector syntax, and assertion methods in the test files.
+Use AI assistance effectively. When you encounter an issue:
+Provide the AI with the specific error message and relevant code
+Ask targeted questions about the potential cause
+Request explanations of correct Cypress syntax and patterns
+Have the AI review your fixes to ensure they're correct
+Fix one issue at a time. Addressing multiple issues simultaneously can lead to confusion. Fix one problem, run the tests again, and then move on to the next issue.
+Document your fixes. Keep track of the issues you find and how you resolve them. This will help you learn from the debugging process and share knowledge with your team.
+
+Implementing Page Object Model (POM) with AI
+
+After debugging the framework, you'll want to implement the Page Object Model pattern to improve test maintainability. Here's how to approach this with AI assistance:
+The Page Object Model (POM) is a design pattern that creates an object repository for web UI elements. It helps reduce code duplication and improves test maintenance. To implement POM in your Cypress framework using AI:
+Understand POM fundamentals. The Page Object Model separates page-specific code from test logic:
+Each page or component gets its own class
+The class contains methods that perform actions on that page
+Tests import and use these page objects instead of directly interacting with elements
+Plan your page structure. Identify the pages or components in your application that need page objects. Common examples include:
+Login page
+Navigation menu
+Dashboard
+Forms or specific functional areas
+Create a basic page object structure. Ask the AI to help you create a template for your page objects. A typical structure includes:
+Element selectors
+Methods for actions (click, type, etc.)
+Methods for assertions
+Navigation methods
+Use AI to generate page objects. Provide the AI with:
+The HTML structure of the page
+The actions that need to be performed
+Any existing test code that interacts with the page
